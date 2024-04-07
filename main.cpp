@@ -16,14 +16,31 @@ video: Chapter 2 - Part 3
  
  1) Write down the names of the 6 major primitive types available in C++  here:
  
+    1. Boolean type
+        - bool
+
+    2. Integer types
+        - short
+        - int
+        - long
+        - long long
  
- 
- 
- 
- 
- 
- 
- 
+    3. Chracter types
+        - char
+        - wchar_t
+        - char16_t
+        - char32_t
+
+   4. Floating point types
+        - float
+        - double
+        - long double
+
+    5. Void type
+        - void
+
+    6. Null Pointer Type
+        - nullptr_t
  
 2) for each primitive type, write out 3 variable declarations inside the variableDeclaration() function on line 59.
     a) give each variable declaration an initial value
