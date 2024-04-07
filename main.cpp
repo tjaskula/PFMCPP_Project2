@@ -154,42 +154,53 @@ bool rentACar(int rentalDuration, int carType = 0)  //function declaration with 
 /*
  1)
  */
+void adjustScreenBrightness(int brightnessLevel = 75);
 
 /*
  2)
  */
+double calculateRectangleArea(double length, double width);
 
 /*
  3)
  */
+bool isEven(int number);
 
 /*
  4)
  */
+void simulateTrafficLight(char initialColor = 'G'); // 'G' for Green, 'Y' for Yellow, 'R' for Red
 
 /*
  5)
  */
+double calculateSimpleInterest(double principal, double rate, int time);
+
 
 /*
  6)
  */
+double fahrenheitToCelsius(double fahrenheit = 32.0);
 
 /*
  7)
  */
+int countDigits(long long number);
 
 /*
  8)
  */
+int maxOfThree(int num1, int num2, int num3);
 
 /*
  9)
  */
+void playBeepSound(float durationSeconds = 2.0f);
 
 /*
  10)
  */
+double calculateHypotenuse(double sideA, double sideB);
 
 /*
  MAKE SURE YOU ARE NOT ON THE MASTER BRANCH
