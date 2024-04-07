@@ -112,9 +112,10 @@ void variableDeclarations()
     long lightYearInKm = 9460730472580800L;
     long diameterOfEarthInMeters = 12742000L;
 
+    /* Generate compiler warnings
     long long distanceToAndromedaInKm = 24000000000000000LL;
     long long worldPopulation = 7600000000000LL;
-    long long grainsOfSandOnEarth = 7500000000000000000LL;
+    long long grainsOfSandOnEarth = 7500000000000000000LL; */
 
     // Floating point types
     float pi = 3.14f;
@@ -125,6 +126,7 @@ void variableDeclarations()
     double earthRadius = 6371.0;
     double speedOfLight = 299792458.0; // in m/s
 
+    
     long double avogadroNumber = 6.02214076e23L;
     long double goldenRatio = 1.6180339887498948482L;
     long double chargeOfElectron = -1.602176634e-19L;
@@ -137,7 +139,7 @@ void variableDeclarations()
     std::nullptr_t missingData = nullptr;
     std::nullptr_t undefinedPerson = nullptr;
 
-    ignoreUnused(number, isRaining, isConnected, hasPassedTest, initialLetter, grade, controlChar, emojiHeart, chineseCharacter, greekLetterSigma, emojiSmile, japaneseCharacter, musicalNote, age, numberOfStudents, temperature, daysInWeek, temperatureInCelsius, numberOfPages, nationalDebt, lightYearInKm, diameterOfEarthInMeters, distanceToAndromedaInKm, worldPopulation, grainsOfSandOnEarth, pi, gravity, bloodAlcoholContent, plankConstant, earthRadius, speedOfLight, avogadroNumber, goldenRatio, chargeOfElectron, noConnection, missingData, undefinedPerson); //passing each variable declared to the ignoreUnused() function
+    ignoreUnused(number, isRaining, isConnected, hasPassedTest, initialLetter, grade, controlChar, emojiHeart, chineseCharacter, greekLetterSigma, emojiSmile, japaneseCharacter, musicalNote, age, numberOfStudents, temperature, daysInWeek, temperatureInCelsius, numberOfPages, nationalDebt, lightYearInKm, diameterOfEarthInMeters, avogadroNumber, goldenRatio, chargeOfElectron, pi, gravity, bloodAlcoholContent, plankConstant, earthRadius, speedOfLight, noConnection, missingData, undefinedPerson); //passing each variable declared to the ignoreUnused() function
 }
 
 /*
@@ -154,53 +156,89 @@ bool rentACar(int rentalDuration, int carType = 0)  //function declaration with 
 /*
  1)
  */
-void adjustScreenBrightness(int brightnessLevel = 75);
+void adjustScreenBrightness(int brightnessLevel = 75)
+{
+    ignoreUnused(brightnessLevel);
+}
 
 /*
  2)
  */
-double calculateRectangleArea(double length, double width);
+double calculateRectangleArea(double length, double width)
+{
+    ignoreUnused(length, width);
+    return {};
+}
 
 /*
  3)
  */
-bool isEven(int number);
+bool isEven(int number)
+{
+    ignoreUnused(number);
+    return {};
+}
 
 /*
  4)
  */
-void simulateTrafficLight(char initialColor = 'G'); // 'G' for Green, 'Y' for Yellow, 'R' for Red
+void simulateTrafficLight(char initialColor = 'G')
+{
+    ignoreUnused(initialColor);
+}
 
 /*
  5)
  */
-double calculateSimpleInterest(double principal, double rate, int time);
-
+double calculateSimpleInterest(double principal, double rate, int time)
+{
+    ignoreUnused(principal, rate, time);
+    return {};
+}
 
 /*
  6)
  */
-double fahrenheitToCelsius(double fahrenheit = 32.0);
+double fahrenheitToCelsius(double fahrenheit = 32.0)
+{
+    ignoreUnused(fahrenheit);
+    return {};
+}
 
 /*
  7)
  */
-int countDigits(long long number);
+int rollDice(int numberOfSides = 6)
+{
+    ignoreUnused(numberOfSides);
+    return {};
+}
 
 /*
  8)
  */
-int maxOfThree(int num1, int num2, int num3);
+int maxOfThree(int num1, int num2, int num3)
+{
+    ignoreUnused(num1, num2, num3);
+    return {};
+}
 
 /*
  9)
  */
-void playBeepSound(float durationSeconds = 2.0f);
+void playBeepSound(float durationSeconds = 2.0f)
+{
+    ignoreUnused(durationSeconds);
+}
 
 /*
  10)
  */
-double calculateHypotenuse(double sideA, double sideB);
+double calculateHypotenuse(double sideA, double sideB)
+{
+    ignoreUnused(sideA, sideB);
+    return {};
+}
 
 /*
  MAKE SURE YOU ARE NOT ON THE MASTER BRANCH
@@ -222,27 +260,37 @@ int main()
     auto carRented = rentACar(6, 2); 
     
     //1)
+    adjustScreenBrightness(50);
     
     //2)
+    auto rectangleArea = calculateRectangleArea(5.0, 10.0);
     
     //3)
+    auto even = isEven(10);
     
     //4)
+    simulateTrafficLight('R');
     
     //5)
+    auto interestRate = calculateSimpleInterest(1000.0, 0.05, 3);
     
     //6)
+    auto celcius = fahrenheitToCelsius(68.0);
     
     //7)
+    auto diceResult = rollDice(20);
     
     //8)
+    auto maxNumber = maxOfThree(10, 20, 30);
     
     //9)
+    playBeepSound(3.0f);
     
     //10)
+    auto hypotenuse = calculateHypotenuse(3.0, 4.0);
     
     
-    ignoreUnused(carRented);
+    ignoreUnused(carRented, rectangleArea, even, interestRate, celcius, diceResult, maxNumber, hypotenuse);
     std::cout << "good to go!" << std::endl;
     return 0;    
 }
