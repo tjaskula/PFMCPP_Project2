@@ -81,10 +81,63 @@ void variableDeclarations()
 {
     //example:
     int number = 2; //declaration of a variable named "number", that uses the primitive type 'int', and the variable's initial value is '2'
-    
 
-    
-    ignoreUnused(number); //passing each variable declared to the ignoreUnused() function
+    bool isRaining = false;
+    bool isConnected = true;
+    bool hasPassedTest = true;
+
+    // Character Types
+    char initialLetter = 'J';
+    char grade = 'A';
+    char controlChar = '\n'; // Newline character
+
+    char16_t emojiHeart = u'\u2764';  // Unicode heart character
+    char16_t chineseCharacter = u'\u4EBA';  // Unicode for 人 (person)
+    char16_t greekLetterSigma = u'\u03A3';  // Greek Capital Letter Sigma
+
+    char32_t emojiSmile = U'\U0001F642';  // Unicode for 🙂 (smiling face)
+    char32_t japaneseCharacter = U'\U00003042';  // Unicode for ま (Japanese hiragana character)
+    char32_t musicalNote = U'\U0001F3B5';  // Unicode for 🎵 (musical note)
+
+    // Integer types
+    int age = 30;
+    int numberOfStudents = 75;
+    int temperature = -5;
+
+    short daysInWeek = 7;
+    short temperatureInCelsius = -40;
+    short numberOfPages = 250;
+
+    long nationalDebt = 17000000000000L;
+    long lightYearInKm = 9460730472580800L;
+    long diameterOfEarthInMeters = 12742000L;
+
+    long long distanceToAndromedaInKm = 24000000000000000LL;
+    long long worldPopulation = 7600000000000LL;
+    long long grainsOfSandOnEarth = 7500000000000000000LL;
+
+    // Floating point types
+    float pi = 3.14f;
+    float gravity = 9.81f;
+    float bloodAlcoholContent = 0.08f;
+
+    double plankConstant = 6.62607015e-34;
+    double earthRadius = 6371.0;
+    double speedOfLight = 299792458.0; // in m/s
+
+    long double avogadroNumber = 6.02214076e23L;
+    long double goldenRatio = 1.6180339887498948482L;
+    long double chargeOfElectron = -1.602176634e-19L;
+
+    // Void type
+    // void is used for functions that do not return a value 
+
+    // Null Pointer Type
+    std::nullptr_t noConnection = nullptr;
+    std::nullptr_t missingData = nullptr;
+    std::nullptr_t undefinedPerson = nullptr;
+
+    ignoreUnused(number, isRaining, isConnected, hasPassedTest, initialLetter, grade, controlChar, emojiHeart, chineseCharacter, greekLetterSigma, emojiSmile, japaneseCharacter, musicalNote, age, numberOfStudents, temperature, daysInWeek, temperatureInCelsius, numberOfPages, nationalDebt, lightYearInKm, diameterOfEarthInMeters, distanceToAndromedaInKm, worldPopulation, grainsOfSandOnEarth, pi, gravity, bloodAlcoholContent, plankConstant, earthRadius, speedOfLight, avogadroNumber, goldenRatio, chargeOfElectron, noConnection, missingData, undefinedPerson); //passing each variable declared to the ignoreUnused() function
 }
 
 /*
